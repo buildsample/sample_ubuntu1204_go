@@ -8,7 +8,7 @@ go:
 env:
   - CI_REPORT=shippable/testresults/junit.xml
 
-build_image: shippableimages/ubuntu1204_go
+build_image: shippableimages/ubuntu1204_go:0.0.2
 
 
 before_install:
@@ -28,6 +28,7 @@ install:
 
 # Make folders for the reports
 before_script:
+  - git --version
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
