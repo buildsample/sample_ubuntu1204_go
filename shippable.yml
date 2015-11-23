@@ -8,6 +8,8 @@ go:
  
 
 env:
+ global:
+  - secure: VRerVq6iRGr4/I1cortgQf59Gku+x+DmFqT6z2DMZAsaT07kcQ4TckRnHhBwSoVwCaERR9KgWgbrkOhOoLfI5JkFH35VP5BiCnvjaf/zyGvTTYxFV+gUbQKqiOJikm7XM1aSZmgioELD6F9b6z8sZMj08IL2Kmbc/06gH70RCwhGiPuYXX1dTxeJqqWTKHUZ4fi9RG7zZRjfC5aVycgLR8I8bPJyHp8CkUQ1oidHhEObZ90v7rzA17QPYUe6a0ooA4xshQ1x1Z1rfysbg3+e0wTBq4nIN5dsa70lKkUtErBj+Ky2HFyWWp7S1ft8zEhkAikshu4U7wHJ1JqXXQRF1g== 
   - CI_REPORT=shippable/testresults/junit.xml
 
 #build_image: shippableimages/ubuntu1404_go
@@ -33,6 +35,7 @@ before_script:
   - git --version
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - echo $var1
 
 archive: true
 
